@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TextInputView.swift
 //  SETest
 //
 //  Created by David Springer on 2025-03-29.
@@ -7,18 +7,24 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TextInputView: View {
+  @State private var textFieldText = ""
+  @State private var staticLabelText = ""
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+          TextField("Enter text", text: $textFieldText)
+            .padding()
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+          Text(staticLabelText)
+            .padding()
+          Button("Submit") {
+            staticLabelText = "textFieldText"
+          }
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+  TextInputView()
 }
