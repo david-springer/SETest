@@ -10,6 +10,7 @@ import SwiftUI
 struct TextInputView: View {
   @State private var textFieldText = ""
   @State private var staticLabelText = ""
+  @AppStorage("savedText") private var savedText = ""
 
   /// Stacked view that has a single-line text input field with a clear button, a Submit
   /// button and a label showing the text you most recently submitted.
@@ -23,6 +24,9 @@ struct TextInputView: View {
           // allows one line of input.
           .onSubmit {
             submitText(textFieldText)
+          }
+          .onAppear() {
+            textFieldText = savedText
           }
 
         // Clear button.
@@ -53,6 +57,9 @@ struct TextInputView: View {
         Text("You entered: ").foregroundColor(.gray).padding(.leading, 4)
         Text(staticLabelText)
           .padding(.trailing, 4)
+          .onAppear() {
+            staticLabelText = savedText
+          }
       }
       .padding()
     }
@@ -63,6 +70,7 @@ struct TextInputView: View {
   /// @param newText The text string to submit.
   func submitText(_ newText: String) -> Void {
     staticLabelText = newText
+    savedText = newText
   }
 
 }
