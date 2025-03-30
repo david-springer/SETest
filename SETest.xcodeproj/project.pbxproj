@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		741D562F2D9979F3007A6159 /* libSETestCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 741D56232D997925007A6159 /* libSETestCommon.a */; };
+		741D56322D997A00007A6159 /* libSETestCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 741D56232D997925007A6159 /* libSETestCommon.a */; };
+		74C079FE2D98A7DC00C0CC26 /* SEShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 74C079F42D98A7DB00C0CC26 /* SEShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7411F6512D987F7800E4A7EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +27,69 @@
 			remoteGlobalIDString = 7411F63F2D987F7500E4A7EE;
 			remoteInfo = SETest;
 		};
+		741D56302D9979F3007A6159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7411F6382D987F7500E4A7EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 741D56222D997925007A6159;
+			remoteInfo = "SETest Common Library";
+		};
+		741D56332D997A00007A6159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7411F6382D987F7500E4A7EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 741D56222D997925007A6159;
+			remoteInfo = "SETest Common Library";
+		};
+		74C079FC2D98A7DC00C0CC26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7411F6382D987F7500E4A7EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74C079F32D98A7DB00C0CC26;
+			remoteInfo = SEShareExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		741D56212D997925007A6159 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C07A032D98A7DC00C0CC26 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				74C079FE2D98A7DC00C0CC26 /* SEShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7411F6402D987F7500E4A7EE /* SETest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SETest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7411F6502D987F7800E4A7EE /* SETestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SETestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7411F65A2D987F7800E4A7EE /* SETestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SETestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		741D56232D997925007A6159 /* libSETestCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSETestCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C079F42D98A7DB00C0CC26 /* SEShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SEShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		74C079FF2D98A7DC00C0CC26 /* Exceptions for "SEShareExtension" folder in "SEShareExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 74C079F32D98A7DB00C0CC26 /* SEShareExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7411F6422D987F7500E4A7EE /* SETest */ = {
@@ -45,6 +107,19 @@
 			path = SETestUITests;
 			sourceTree = "<group>";
 		};
+		741D56242D997925007A6159 /* SETestCommon */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SETestCommon;
+			sourceTree = "<group>";
+		};
+		74C079F52D98A7DC00C0CC26 /* SEShareExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				74C079FF2D98A7DC00C0CC26 /* Exceptions for "SEShareExtension" folder in "SEShareExtension" target */,
+			);
+			path = SEShareExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741D562F2D9979F3007A6159 /* libSETestCommon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +145,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		741D56202D997925007A6159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C079F12D98A7DB00C0CC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				741D56322D997A00007A6159 /* libSETestCommon.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +169,9 @@
 				7411F6422D987F7500E4A7EE /* SETest */,
 				7411F6532D987F7800E4A7EE /* SETestTests */,
 				7411F65D2D987F7800E4A7EE /* SETestUITests */,
+				74C079F52D98A7DC00C0CC26 /* SEShareExtension */,
+				741D56242D997925007A6159 /* SETestCommon */,
+				741D562E2D9979D3007A6159 /* Frameworks */,
 				7411F6412D987F7500E4A7EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +182,17 @@
 				7411F6402D987F7500E4A7EE /* SETest.app */,
 				7411F6502D987F7800E4A7EE /* SETestTests.xctest */,
 				7411F65A2D987F7800E4A7EE /* SETestUITests.xctest */,
+				74C079F42D98A7DB00C0CC26 /* SEShareExtension.appex */,
+				741D56232D997925007A6159 /* libSETestCommon.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		741D562E2D9979D3007A6159 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +205,13 @@
 				7411F63C2D987F7500E4A7EE /* Sources */,
 				7411F63D2D987F7500E4A7EE /* Frameworks */,
 				7411F63E2D987F7500E4A7EE /* Resources */,
+				74C07A032D98A7DC00C0CC26 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				74C079FD2D98A7DC00C0CC26 /* PBXTargetDependency */,
+				741D56312D9979F3007A6159 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				7411F6422D987F7500E4A7EE /* SETest */,
@@ -163,6 +269,51 @@
 			productReference = 7411F65A2D987F7800E4A7EE /* SETestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		741D56222D997925007A6159 /* SETestCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 741D56272D997925007A6159 /* Build configuration list for PBXNativeTarget "SETestCommon" */;
+			buildPhases = (
+				741D561F2D997925007A6159 /* Sources */,
+				741D56202D997925007A6159 /* Frameworks */,
+				741D56212D997925007A6159 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				741D56242D997925007A6159 /* SETestCommon */,
+			);
+			name = SETestCommon;
+			packageProductDependencies = (
+			);
+			productName = "SETest Common Library";
+			productReference = 741D56232D997925007A6159 /* libSETestCommon.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		74C079F32D98A7DB00C0CC26 /* SEShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C07A002D98A7DC00C0CC26 /* Build configuration list for PBXNativeTarget "SEShareExtension" */;
+			buildPhases = (
+				74C079F02D98A7DB00C0CC26 /* Sources */,
+				74C079F12D98A7DB00C0CC26 /* Frameworks */,
+				74C079F22D98A7DB00C0CC26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				741D56342D997A00007A6159 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				74C079F52D98A7DC00C0CC26 /* SEShareExtension */,
+			);
+			name = SEShareExtension;
+			packageProductDependencies = (
+			);
+			productName = SEShareExtension;
+			productReference = 74C079F42D98A7DB00C0CC26 /* SEShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +335,12 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 7411F63F2D987F7500E4A7EE;
 					};
+					741D56222D997925007A6159 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					74C079F32D98A7DB00C0CC26 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 7411F63B2D987F7500E4A7EE /* Build configuration list for PBXProject "SETest" */;
@@ -203,6 +360,8 @@
 				7411F63F2D987F7500E4A7EE /* SETest */,
 				7411F64F2D987F7800E4A7EE /* SETestTests */,
 				7411F6592D987F7800E4A7EE /* SETestUITests */,
+				74C079F32D98A7DB00C0CC26 /* SEShareExtension */,
+				741D56222D997925007A6159 /* SETestCommon */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +382,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7411F6582D987F7800E4A7EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C079F22D98A7DB00C0CC26 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +419,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		741D561F2D997925007A6159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C079F02D98A7DB00C0CC26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +445,21 @@
 			isa = PBXTargetDependency;
 			target = 7411F63F2D987F7500E4A7EE /* SETest */;
 			targetProxy = 7411F65B2D987F7800E4A7EE /* PBXContainerItemProxy */;
+		};
+		741D56312D9979F3007A6159 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 741D56222D997925007A6159 /* SETestCommon */;
+			targetProxy = 741D56302D9979F3007A6159 /* PBXContainerItemProxy */;
+		};
+		741D56342D997A00007A6159 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 741D56222D997925007A6159 /* SETestCommon */;
+			targetProxy = 741D56332D997A00007A6159 /* PBXContainerItemProxy */;
+		};
+		74C079FD2D98A7DC00C0CC26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74C079F32D98A7DB00C0CC26 /* SEShareExtension */;
+			targetProxy = 74C079FC2D98A7DC00C0CC26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,6 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SETest/SETest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SETest/Preview Content\"";
@@ -409,7 +605,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.tailscale.SETest;
+				PRODUCT_BUNDLE_IDENTIFIER = io.tailscale.DavidsSETest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -422,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SETest/SETest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SETest/Preview Content\"";
@@ -438,7 +635,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.tailscale.SETest;
+				PRODUCT_BUNDLE_IDENTIFIER = io.tailscale.DavidsSETest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -514,6 +711,84 @@
 			};
 			name = Release;
 		};
+		741D56282D997925007A6159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24XQPYB77S;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		741D56292D997925007A6159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24XQPYB77S;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		74C07A012D98A7DC00C0CC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SEShareExtension/SEShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24XQPYB77S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SEShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SEShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.tailscale.DavidsSETest.SEShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74C07A022D98A7DC00C0CC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SEShareExtension/SEShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24XQPYB77S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SEShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SEShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.tailscale.DavidsSETest.SEShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,6 +824,24 @@
 			buildConfigurations = (
 				7411F66B2D987F7800E4A7EE /* Debug */,
 				7411F66C2D987F7800E4A7EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		741D56272D997925007A6159 /* Build configuration list for PBXNativeTarget "SETestCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				741D56282D997925007A6159 /* Debug */,
+				741D56292D997925007A6159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C07A002D98A7DC00C0CC26 /* Build configuration list for PBXNativeTarget "SEShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C07A012D98A7DC00C0CC26 /* Debug */,
+				74C07A022D98A7DC00C0CC26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

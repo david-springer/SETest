@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
+import SETestCommon
 
 struct TextInputView: View {
   @State private var textFieldText = ""
   @State private var staticLabelText = ""
-  @AppStorage("savedText") private var savedText = ""
 
   /// Stacked view that has a single-line text input field with a clear button, a Submit
   /// button and a label showing the text you most recently submitted.
@@ -24,9 +24,6 @@ struct TextInputView: View {
           // allows one line of input.
           .onSubmit {
             submitText(textFieldText)
-          }
-          .onAppear() {
-            textFieldText = savedText
           }
 
         // Clear button.
@@ -57,20 +54,34 @@ struct TextInputView: View {
         Text("You entered: ").foregroundColor(.gray).padding(.leading, 4)
         Text(staticLabelText)
           .padding(.trailing, 4)
-          .onAppear() {
-            staticLabelText = savedText
-          }
       }
       .padding()
     }
     .padding()
+    .onAppear() {
+      synchroniseSharedText()
+    }
+    .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+      synchroniseSharedText()
+    }
+
   }
 
   /// Handle the submit action.
   /// @param newText The text string to submit.
   func submitText(_ newText: String) -> Void {
     staticLabelText = newText
-    savedText = newText
+  }
+
+  /// Synchronises with the shared text..
+  func synchroniseSharedText() -> Void {
+    guard
+      let userDefaults = UserDefaults(suiteName: Constants.sharedAppGroupIdentifier),
+      let sharedText = userDefaults.string(forKey: Constants.sharedTextKey) else {
+        return
+      }
+    textFieldText = sharedText
+    staticLabelText = sharedText
   }
 
 }
